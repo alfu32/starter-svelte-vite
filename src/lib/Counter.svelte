@@ -25,7 +25,7 @@
 <button on:click={decrement}>
   &lt;
 </button>
-<span style="display:inline-block">[{name}]={countValue}</span>
+<span style="display:inline-block">{name}={countValue}</span>
 <button on:click={increment}>
   &gt;
 </button>
