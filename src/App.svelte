@@ -3,5 +3,8 @@
 </script>
 
 <main>
-    <Counter />
+    <Counter name="cats"/>
+    <Counter name="dogs"/>
+    <Counter name="rabbits"/>
+    <Counter name="puppies"/>    
 </main>

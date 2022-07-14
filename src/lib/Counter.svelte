@@ -1,21 +1,34 @@
 <script>
 
-	import { count } from '../store/store.js';
+	import { counterStore} from '../store/store.js';
 
-function decrement() {
-  count.update(n => n - 1);
-}
-  const increment = () => {
-    count.update(n => n + 1);
+  function decrement() {
+    counterStore.update(counters => {
+      counters[name] = (counters[name]||0)-1;
+      return {...counters};
+    });
   }
+  const increment = () => {
+    counterStore.update(counters => {
+      counters[name] = (counters[name]||0)+1;
+      return {...counters};
+    });
+  }
+  export let name="counter";
+  let countValue;
+
+	counterStore.subscribe(counters => {
+		countValue = (counters[name]||0);
+	});
 </script>
 
-<button on:click={increment}>
-  ++
-</button>
 <button on:click={decrement}>
-  --
+  &lt;
 </button>
-<pre>count is {count}</pre>
+<span style="display:inline-block">[{name}]={countValue}</span>
+<button on:click={increment}>
+  &gt;
+</button>
+
   
   
