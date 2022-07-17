@@ -1,3 +1,10 @@
+# svelte - vite starter project
+
+install using the install script install.sh
+
+`curl curl https://raw.githubusercontent.com/alfu32/starter-svelte-vite/main/install.sh | sh -`
+
+
 # Svelte + Vite
 
 This template should help get you started developing with Svelte in Vite.
